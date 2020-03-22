@@ -23,7 +23,6 @@ export default {
   },
   methods: {
     addElement(value) {
-      console.log("called addElement")
       this.elements.push({ message: value });
     }
   }
