@@ -6,11 +6,13 @@
   </div>
 </template>
 
-<script>
-import TodoList from "./components/TodoList";
-import TodoForm from "./components/TodoForm";
+<script lang="ts">
+import Vue from "vue";
+import TodoList from "./components/TodoList.vue";
+import TodoForm from "./components/TodoForm.vue";
+import MyPlugin from "./plugin/MyPlugin";
 
-export default {
+export default Vue.extend({
   name: "App",
   components: {
     TodoList,
@@ -25,11 +27,11 @@ export default {
     this.$sample.pluginEcho();
   },
   methods: {
-    addElement(value) {
+    addElement(value: string) {
       this.elements.push({ message: value });
     }
   }
-};
+});
 </script>
 
 <style lang="scss">
