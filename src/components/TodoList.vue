@@ -6,18 +6,18 @@
   </div>
 </template>
 
-<script>
-import TodoItem from "@/components/TodoItem";
-export default {
+<script lang="ts">
+import Vue from "vue";
+import TodoItem from "@/components/TodoItem.vue";
+
+export default Vue.extend({
   components: {
     TodoItem
   },
   props: {
-    elements: {
-      Type: Array
-    }
+    elements: Array
   }
-};
+});
 </script>
 
 <style scoped></style>
