@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul class>
-      <TodoItem v-for="(el, i) in elements" :key="i" :item="el" />
+      <TodoItem v-for="(el, i) in elements" :key="i" :item="el" :count="i" />
     </ul>
   </div>
 </template>

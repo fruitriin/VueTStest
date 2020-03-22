@@ -2,8 +2,9 @@
   <li>
     <span>{{ item }}</span>
     <span>{{ message }}</span>
-    <span>{{ count }}</span>
-    <span>{{ double }}</span>
+    <span>{{ count }}</span>/
+    <span>{{ double }}</span>/
+    <span>{{ $sample.triple(double)}}</span>
   </li>
 </template>
 
@@ -12,12 +13,14 @@ export default {
   props: {
     item: {
       Type: Object
+    },
+    count: {
+      type: Number
     }
   },
   data() {
     return {
       message: "sample",
-      count: 2
     };
   },
   computed: {
