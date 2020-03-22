@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 import Vue from "vue";
 export default Vue.extend({
   data() {
@@ -7,7 +7,7 @@ export default Vue.extend({
     };
   },
   methods: {
-    getLowerCase(message) {
+    getLowerCase(message: string): string {
       return message.toLowerCase();
     }
   },

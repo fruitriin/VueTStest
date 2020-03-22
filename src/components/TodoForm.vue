@@ -7,9 +7,10 @@
   </div>
 </template>
 
-<script>
-import MyMixin from "../mixin/MyMixin";
-export default {
+<script lang="ts">
+import Vue from "vue";
+import MyMixin from "../mixin/MyMixin.vue";
+export default Vue.extend({
   data() {
     return {
       tmpText: ""
@@ -22,8 +23,11 @@ export default {
       this.tmpText = "";
     },
     submitLower() {
-      this.$emit("submit", this.getLowerCase(this.tmpText));
+      this.$emit(
+        "submit",
+        (this as InstanceType<typeof MyMixin>).getLowerCase(this.tmpText)
+      );
     }
   }
-};
+});
 </script>
