@@ -21,6 +21,9 @@ export default {
       elements: [{ message: "data1" }, { message: "data2" }]
     };
   },
+  mounted() {
+    this.$sample.pluginEcho();
+  },
   methods: {
     addElement(value) {
       this.elements.push({ message: value });
