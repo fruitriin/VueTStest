@@ -2,21 +2,30 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
     <TodoList :elements="elements" />
+    <TodoForm @submit="addElement" />
   </div>
 </template>
 
 <script>
 import TodoList from "./components/TodoList";
+import TodoForm from "./components/TodoForm";
 
 export default {
   name: "App",
   components: {
-    TodoList
+    TodoList,
+    TodoForm
   },
   data() {
     return {
       elements: [{ message: "data1" }, { message: "data2" }]
     };
+  },
+  methods: {
+    addElement(value) {
+      console.log("called addElement")
+      this.elements.push({ message: value });
+    }
   }
 };
 </script>
